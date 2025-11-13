@@ -13,7 +13,5 @@ jobs:
       - name: Trigger Cloudflare Pages build
         run: |
           echo "Triggering Cloudflare Pages build..."
-          curl -X POST "https://api.cloudflare.com/client/v4/pages/YOUR_ACCOUNT/YOUR_PROJECT/builds" \
-            -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{}'
+          curl -X POST "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CF_ACCOUNT_ID }}/pages/projects/${{ secrets.CF_PROJECT_NAME }}/deployments" \
+            -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}"
