@@ -7,7 +7,13 @@ slug = "228df13c"
 
 [taxonomies]
 commenters = ["cac0b9c"]
-threads = ["all", "debug-comment-template/#:~:text=Debug%20Pending%20Comments", "comments/228df13c/"]
+threads = ["all", "debug-comment-template/#:~:text=Debug%20Pending%20Comments", "comments/228df13c"]
+replies = ["debug-comment-template"]
+
+[extra.email]
+dkim = false
+dmarc = false
+spf = false
 
 [extra.comment]
 document = "/debug-comment-template/"

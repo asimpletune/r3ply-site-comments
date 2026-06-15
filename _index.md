@@ -1,6 +1,10 @@
 +++
 title = "All comments on r3ply.com"
-template = "base.html"
+template = "comments.html"
 
-render = false
+render = true
 +++
+
+{{ breadcrumbs() }}
+
+# All Comments
